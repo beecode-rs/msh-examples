@@ -1,0 +1,29 @@
+{
+  "name": "msh-util-esm-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "ts-node": "node --loader ts-node/esm",
+    "start": "node src/index.js",
+    "start-es": "node --experimental-modules src/index.js",
+    "start-ts": "npm run ts-node -- src/index.ts",
+    "start-build": "node ./dist/esm/index.js",
+    "start-build-cjs": "node ./dist/cjs/index.js",
+    "build": "tsc",
+    "hybrid-node-fix": "mkdir -p ./dist/cjs && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
+    "build-cjs": "npm run hybrid-node-fix && tsc -p ./tsconfig-cjs.json"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@beecode/msh-util": "file:../../../util"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

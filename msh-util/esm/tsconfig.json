@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist/esm",
+    "baseUrl": "./",
+    "lib": ["ESNext"],
+    "rootDir": "./src",
+    "module": "NodeNext",
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
+    "target": "EsNext"
+  },
+  "include": ["src/index.ts"]
+}

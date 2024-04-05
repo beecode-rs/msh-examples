@@ -1,0 +1,24 @@
+{
+  "name": "msh-util-esm-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "start-ts": "ts-node ./src/index.ts",
+    "start-build": "node ./dist/index.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@beecode/msh-util": "file:../../../util"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

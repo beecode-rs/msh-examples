@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist/cjs",
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "target": "ESNext"
+  },
+  "include": ["src/index.ts"]
+}
