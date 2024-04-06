@@ -13,7 +13,13 @@
     "start-build-cjs": "node ./dist/cjs/index.js",
     "build": "tsc",
     "hybrid-node-fix": "mkdir -p ./dist/cjs && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
-    "build-cjs": "npm run hybrid-node-fix && tsc -p ./tsconfig-cjs.json"
+    "build-cjs": "npm run hybrid-node-fix && tsc -p ./tsconfig-cjs.json",
+    "t-clean": "rimraf lib",
+    "t-declarations": "tsc -p tsconfig.types.json",
+    "t-build:esm": "cross-env BABEL_ENV=esmUnbundled babel src --extensions '.ts' --out-dir 'lib/esm' --source-maps",
+    "t-build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.ts' --out-dir 'lib/cjs' --source-maps",
+    "t-build:bundles": "cross-env BABEL_ENV=esmBundled rollup -c",
+    "t-build": "npm-run-all -l clean -p t-build:esm t-build:cjs t-build:bundles t-declarations"
   },
   "keywords": [],
   "dependencies": {
@@ -22,7 +28,17 @@
   "devDependencies": {
     "@types/node": "20.12.2",
     "ts-node": "10.9.2",
-    "typescript": "5.4.3"
+    "typescript": "5.4.3",
+    "rollup": "4.14.0",
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@babel/cli": "7.24.1",
+    "@babel/core": "7.24.4",
+    "@babel/preset-env": "7.24.4",
+    "@babel/preset-typescript": "7.24.1",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-terser": "0.4.4",
+    "cross-env": "7.0.3"
   },
   "author": "",
   "license": "ISC"
