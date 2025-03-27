@@ -26,19 +26,19 @@
     "@beecode/msh-util": "file:../../../util"
   },
   "devDependencies": {
-    "@types/node": "20.12.2",
-    "ts-node": "10.9.2",
-    "typescript": "5.4.3",
-    "rollup": "4.14.0",
-    "@rollup/plugin-commonjs": "25.0.7",
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@babel/cli": "7.24.1",
-    "@babel/core": "7.24.4",
-    "@babel/preset-env": "7.24.4",
-    "@babel/preset-typescript": "7.24.1",
-    "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-terser": "0.4.4",
-    "cross-env": "7.0.3"
+    "@types/node": "^20.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
+    "rollup": "^4.14.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-typescript": "^7.24.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "cross-env": "^7.0.3"
   },
   "author": "",
   "license": "ISC"
